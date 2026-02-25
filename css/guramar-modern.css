@@ -38,9 +38,25 @@ h1, h2, h3 { font-family: 'Playfair Display', 'Abril Fatface', serif; }
 }
 .navbar-brand {
   font-family: 'Playfair Display', serif;
-  font-size: 1.55rem;
+  font-size: 1.75rem;
+  font-weight: 700;
   color: var(--ga-gold) !important;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  transition: all var(--ga-transition);
+  background: linear-gradient(135deg, var(--ga-gold) 0%, var(--ga-gold-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(201, 168, 76, 0.15);
+  filter: drop-shadow(0 0 8px rgba(201, 168, 76, 0.1));
+}
+.navbar-brand:hover {
+  letter-spacing: 0.08em;
+  filter: drop-shadow(0 0 16px rgba(201, 168, 76, 0.2));
+  transform: scale(1.02);
 }
 .nav-link {
   font-family: 'DM Sans', sans-serif !important;
