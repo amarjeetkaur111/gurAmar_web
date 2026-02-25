@@ -657,3 +657,77 @@ h1, h2, h3 { font-family: 'Playfair Display', 'Abril Fatface', serif; }
 @media (max-width: 575px) {
   .ga-why-grid { grid-template-columns: 1fr; }
 }
+
+/* ── Navbar Scrolled State Override ── */
+#ftco-navbar.scrolled {
+  background: rgba(14,14,14,0.98) !important;
+  margin-top: 0 !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3) !important;
+  border-bottom: 1px solid rgba(201,168,76,0.15) !important;
+}
+#ftco-navbar.scrolled .navbar-brand {
+  color: var(--ga-gold) !important;
+}
+#ftco-navbar.scrolled .nav-link {
+  color: rgba(255,255,255,0.75) !important;
+}
+#ftco-navbar.scrolled .nav-link:hover,
+#ftco-navbar.scrolled .nav-item.active .nav-link {
+  color: var(--ga-gold) !important;
+}
+#ftco-navbar.scrolled .navbar-toggler {
+  border-color: rgba(201,168,76,0.5) !important;
+  color: rgba(255,255,255,0.75) !important;
+}
+#ftco-navbar.scrolled .navbar-toggler:hover {
+  color: var(--ga-gold) !important;
+}
+
+/* Dropdown menu styling */
+.nav-item.dropdown .nav-link::after {
+  content: '';
+  position: static;
+  display: inline-block;
+  margin-left: 6px;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid rgba(255,255,255,0.75);
+  transition: transform var(--ga-transition);
+}
+.nav-item.dropdown .nav-link[aria-expanded="true"]::after {
+  transform: rotateZ(180deg);
+  border-top-color: var(--ga-gold);
+}
+.nav-item.dropdown .dropdown-menu {
+  background: rgba(14,14,14,0.98) !important;
+  border: 1px solid rgba(201,168,76,0.15) !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3) !important;
+  min-width: 220px;
+  margin-top: 8px;
+  padding: 6px 0;
+}
+.dropdown-menu .dropdown-item {
+  color: rgba(255,255,255,0.75) !important;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 10px 16px;
+  transition: all var(--ga-transition) !important;
+}
+.dropdown-menu .dropdown-item:hover {
+  background: rgba(201,168,76,0.1) !important;
+  color: var(--ga-gold) !important;
+  padding-left: 22px;
+}
+.dropdown-menu .dropdown-item.active {
+  background: rgba(201,168,76,0.15) !important;
+  color: var(--ga-gold) !important;
+}
